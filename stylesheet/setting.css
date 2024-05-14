@@ -337,14 +337,14 @@
     border: none;
   }
   .deactivateBtn{
-    background-color: rgb(201, 20, 50);
+    background-color: var(--logout-color);
     color: var(--background-color);
   }
   .deactivateBtn:hover{
-    background-color: rgb(246, 99, 99);
+    background-color: var(--logout-hover-color);
   }
   .deactivateBtn:active{
-    background-color: rgb(154, 73, 73);
+    background-color: var(--logout-active-color);
   }
   .cancelBtn{
     background-color: var(--cancel-color);

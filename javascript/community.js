@@ -1,3 +1,22 @@
+let reportBtns = document.querySelectorAll('.dropdown button');
+let reports = document.querySelectorAll('.report');
+let body = document.querySelector('body');
+
+reportBtns.forEach(function(btn, index) {
+  btn.addEventListener('click', function(event) {
+    event.stopPropagation();
+    reports[index].classList.toggle('hidden');
+  });
+});
+
+body.addEventListener('click', function(event) {
+  reports.forEach(function(report) {
+    if (!report.contains(event.target)) {
+      report.classList.add('hidden');
+    }
+  });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.see-more-btn').forEach(function(button) {
         let postContent = button.parentElement.querySelector('.post-title');
@@ -21,10 +40,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
 });
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const cancelButton = document.querySelectorAll('.cancelBtn')
 const overlay = document.getElementById('overlay')
 
 openModalButtons.forEach(button => {
@@ -42,6 +63,13 @@ overlay.addEventListener('click', () => {
 })
 
 closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+
+cancelButton.forEach(button => {
   button.addEventListener('click', () => {
     const modal = button.closest('.modal')
     closeModal(modal)

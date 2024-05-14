@@ -85,12 +85,15 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="header-name">
-                            <div>
+                            <div class="hehe">
                                 <img src="images/dogcol1.jpg" alt="dog">
                                 <p>Username . dd/mm/yyyy</p>
                             </div>
                             
-                            <div>...</div>
+                            <div class="dropdown">
+                                <button>...</button>
+                                <div class="report hidden" data-modal-target="#report">Report post</div>
+                            </div>
                         </div>
 
                         <div class="title">
@@ -142,8 +145,15 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="header-name">
-                            <img src="images/dogcol1.jpg" alt="dog">
-                            <p>Username . dd/mm/yyyy</p>
+                            <div class="hehe">
+                                <img src="images/dogcol1.jpg" alt="dog">
+                                <p>Username . dd/mm/yyyy</p>
+                            </div>
+                            
+                            <div class="dropdown">
+                                <button>...</button>
+                                <div class="report hidden" data-modal-target="#report">Report post</div>
+                            </div>
                         </div>
 
                         <div class="title">
@@ -278,6 +288,20 @@
                     <input type="text" class="comment-input" placeholder="Write a comment...">
                     <button id="comment-btn">Comment</button>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="report">
+        <div class="modal-header2">
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+    
+        <div class="modal-body2">
+            <p>Are you sure you want to report this post?</p>
+            <div>
+                <button class="reportBtn">Report</button>
+                <button class="cancelBtn">Cancel</button>
             </div>
         </div>
     </div>

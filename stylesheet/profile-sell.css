@@ -60,12 +60,53 @@
     gap: 40px;
     border-top: 1px solid #B8938B;
   }
-  .profile-post{
+
+  .profile-sell{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 60px 0px;
+    gap: 9rem;
+    width: 100%;
+  }
+  .card{
+    width: 200px;
+    max-width: 90%;
+    height: 300px;
+    border: 1px solid #988270;
+    background-color: rgba(255, 255, 255, 0.47);
+    border-radius: 14px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+  }
+  .card img{
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+  }
+  .description{
+    padding: 8px 10px;
+  }
+  .money{
+    font-size: 12px;
+    font-weight: 200;
+    color: grey;
+  }
+  .btn{
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 10px;
+  }
+  .see-more{
+    font-size: 13px;
+    font-weight: 200;
+    display: flex;
     justify-content: center;
-    gap: 2.5rem;
+    align-items: center;
+    background-color: #b8938b;
+    color: #FFFDF5;
+    border-radius: 15px;
+    width: 80px;
+    height: 25px;
   }
   
   .navbar{

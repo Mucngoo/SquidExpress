@@ -42,6 +42,7 @@
   .profile-detail{
     display: flex;
     flex-direction: column;
+    gap: 30px;
     justify-content: center;
   }
   .profile-name{
@@ -66,7 +67,7 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 60px 0px;
-    gap: 9rem;
+    gap: 6rem;
     width: 100%;
   }
   .card{
@@ -158,6 +159,31 @@
   }
   
   @media only screen and (max-width: 1100px) {
+    .profile-info{
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding-bottom: 2rem;
+    }
+    .profile-info img{
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      border: 1px solid #B8938B;
+    }
+    .profile-name{
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      gap: 15px;
+    }
+    .profile-follow{
+      font-size: 13.6px;
+    }
+    .profile-sell{
+      padding: 20px 0px;
+      gap: 3rem;
+    }
     .navbar {
       bottom: 0;
       width: 100%;

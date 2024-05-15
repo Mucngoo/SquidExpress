@@ -72,6 +72,7 @@ body[data-theme="dark"] {
     align-items: center;
     padding: 3.5rem 0rem;
     gap: 1rem;
+    margin-left: 12rem;
   }
   
   .profile{
@@ -570,6 +571,9 @@ body[data-theme="dark"] {
   }
   
   @media only screen and (max-width: 1350px) {
+    .wrapper {
+      margin-left: 0;
+    }
     .navbar {
       width: 4rem;
     }

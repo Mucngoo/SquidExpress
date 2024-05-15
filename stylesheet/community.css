@@ -68,6 +68,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-left: 12rem;
 }
 
 .search-bar {
@@ -123,12 +124,14 @@ select {
 
 input[type="date"] {
   padding: 2px 3px 2px 8px;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   border: 2px solid #8D8D8D;
-  border-radius: 15px;
+  border-radius: 0.4rem;
+  font-family: sans-serif;
+  color: #8D8D8D;
 }
 input[type="date"]::before{
-  color: #999;
+  color: #8D8D8D;
   content: attr(placeholder);
 }
 input[type="date"]:focus::before {
@@ -601,6 +604,9 @@ input::placeholder {
 
 
 @media only screen and (max-width: 1000px) {
+  .wrapper {
+    margin-left: 0;
+  }
   .navbar {
     width: 4rem;
   }

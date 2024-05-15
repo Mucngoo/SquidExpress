@@ -109,6 +109,7 @@
     border-radius: 15px;
     width: 80px;
     height: 25px;
+    cursor: pointer;
   }
   
   .navbar{

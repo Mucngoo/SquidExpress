@@ -10,6 +10,25 @@
   --text-color: #7f4b23;
   --button-color: #b8938b;
   --warning-color: #C91432;
+  --nav-color: rgb(127, 75, 35);
+  --nav-hover-color: rgb(182, 132, 107);
+  --nav-active-color: rgb(226, 173, 131);
+
+  --box-background-color: rgba(255, 255, 255, 0.614);
+
+  --button-color: rgb(184, 147, 139);
+  --button-hover-color: rgb(149, 92, 92);
+  --button-active-color: rgb(100, 80, 80);
+
+  --logout-color: rgb(201, 20, 50);
+  --logout-hover-color: rgb(246, 99, 99);
+  --logout-active-color: rgb(154, 73, 73);
+
+  --cancel-color: rgb(111, 111, 111);
+  --cancel-hover-color: rgb(146, 146, 146);
+  --cancel-active-color: rgb(46, 46, 46);
+
+  --overlay-color: rgba(0, 0, 0, .5);
 
   body[data-theme="dark"]{
     --text-color: #DEE9FF;
@@ -18,6 +37,26 @@
     --nav-border: white;
     --button-color:#8D8D8D;
     --warning-color: rgb(246, 99, 99);
+
+    --nav-color: rgb(222, 233, 255);
+  --nav-hover-color: rgb(175, 200, 250);
+  --nav-active-color: rgb(111, 136, 186);
+
+  --box-background-color: rgba(255, 255, 255, 0.19);
+
+  --button-color: rgb(184, 180, 197);
+  --button-hover-color: rgb(184, 180, 197);
+  --button-active-color: rgb(184, 180, 197);
+
+  --logout-color: rgb(201, 20, 50);
+  --logout-hover-color: rgb(246, 99, 99);
+  --logout-active-color: rgb(154, 73, 73);
+
+  --cancel-color: rgb(111, 111, 111);
+  --cancel-hover-color: rgb(146, 146, 146);
+  --cancel-active-color: rgb(46, 46, 46);
+
+  --overlay-color: rgba(0, 0, 0, .5);
   }
 }
 
@@ -156,6 +195,8 @@ select {
   position: fixed;
   background-color: var(--background-color);
   border-right: 1px solid var(--border-color);
+  font-family: 'Kreon', sans-serif;
+  font-weight: bold;
 }
 
 .nav-list {
@@ -172,11 +213,11 @@ select {
 }
 
 .nav-link:hover {
-  color: #b6845c;
+  color: var(--nav-hover-color);
 }
 
 .nav-link:active {
-  color: #e2ad83;
+  color: var(--nav-active-color);
 }
 
 .nav-link {

@@ -96,6 +96,9 @@ body {
 .search {
   display: flex;
 }
+.search::placeholder {
+  color: var(--sub-font-color);
+}
 .search input {
   padding: 5px 5px 5px 10px;
   border: 3px solid var(--search-bar);
@@ -139,13 +142,13 @@ select {
 input[type="date"] {
   padding: 2px 3px 2px 8px;
   background-color: white;
-  border: 2px solid #8D8D8D;
+  border: 2px solid var(--search-bar);
   border-radius: 0.4rem;
   font-family: sans-serif;
-  color: #8D8D8D;
+  color: var(--search-bar);
 }
 input[type="date"]::before{
-  color: #8D8D8D;
+  color: var(--search-bar);
   content: attr(placeholder);
 }
 input[type="date"]:focus::before {

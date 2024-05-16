@@ -55,6 +55,7 @@
   body{
     color: var(--font-color);
     background-color: var(--background-color);
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
   }
@@ -247,7 +248,7 @@
     border: 1px solid var(--font-color);
     border-radius: 10px;
     z-index: 10;
-    background-color: white;
+    background-color: var(--background-color);
     width: 500px;
     max-width: 95%;
     height: 400px;
@@ -272,7 +273,7 @@
     border-radius: 15px;
     border: none;
     background-color: var(--button-color);
-    color: var(--background-color);
+    color: whitesmoke;
   }
   #usernameModal{
     height: 130px;
@@ -297,7 +298,7 @@
     border-radius: 15px;
     border: none;
     background-color: var(--button-color);
-    color: var(--background-color);
+    color: whitesmoke;
   }
   #usernameModal .modal-body form div{
     display: flex;
@@ -336,7 +337,7 @@
     border: none;
     margin: auto;
     background-color: var(--button-color);
-    color: var(--background-color);
+    color: whitesmoke;
   }
   .form__input{
     text-align: center;
@@ -441,7 +442,7 @@
   }
   .deactivateBtn{
     background-color: var(--logout-color);
-    color: var(--background-color);
+    color: whitesmoke;
   }
   .deactivateBtn:hover{
     background-color: var(--logout-hover-color);
@@ -451,7 +452,7 @@
   }
   .cancelBtn{
     background-color: var(--cancel-color);
-    color: var(--background-color);
+    color: whitesmoke;
   }
   .cancelBtn:hover{
     background-color: var(--cancel-hover-color);
@@ -564,18 +565,44 @@
     .modal{
       height: 500px;
     }
+    .box p{
+      font-size: 15px;
+    }
     .info{
       display: flex;
       gap: 0.5rem;
       align-items: center;
     }
+    .info p{
+      font-size: 15px;
+    }
     .photo img{
-      width: 5rem;
-      height: 5rem;
+      width: 4rem;
+      height: 4rem;
       border-radius: 50%;
     }
     #deactivateModal{
       height: 400px;
     }
+  }
+  @media (max-width: 380px){
+    .settingBtn{
+     height: 2rem;
+      width: 6rem;
+    }
+  }
+  *::-webkit-scrollbar-track {
+    background-color: rgba(217, 217, 217, 0.505);
+  }
+  
+  *::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgba(217, 217, 217, 0.505);
+    border-radius: 30px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #B8938B;
+    border-radius: 20px;
   }
   

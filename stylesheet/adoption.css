@@ -15,6 +15,7 @@ body[data-theme="dark"] {
 body {
   color: var(--font-color);
   background-color: var(--background-color);
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -124,6 +125,20 @@ select {
   height: 25px;
   cursor: pointer;
 }
+.pag{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #b6845c;
+  color: #ffffff;
+  font-size: 16px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
 
 
 .navbar {
@@ -177,7 +192,7 @@ select {
 @media only screen and (max-width: 1000px) {
   .wrapper {
     padding-left: 0;
-    margin-bottom: 25%; 
+    margin-bottom: 3rem;
   }
 
   .navbar {
@@ -243,4 +258,18 @@ select {
     padding: 60px 0px 0px 0px;
   }
 
+}
+*::-webkit-scrollbar-track {
+  background-color: rgba(217, 217, 217, 0.505);
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(217, 217, 217, 0.505);
+  border-radius: 30px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #B8938B;
+  border-radius: 20px;
 }

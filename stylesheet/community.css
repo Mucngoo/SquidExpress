@@ -9,6 +9,8 @@
   --background-color: rgb(255, 253, 245);
   --font-color: rgb(51, 51, 51);
 
+  --search-bar: rgb(141, 141, 141);
+
   --nav-color: rgb(127, 75, 35);
   --nav-hover-color: rgb(182, 132, 107);
   --nav-active-color: rgb(226, 173, 131);
@@ -32,6 +34,8 @@
 body[data-theme="dark"] {
   --background-color: rgb(35, 40, 48);
   --font-color: rgb(247, 247, 247);
+
+  --search-bar: rgb(222, 233, 255);
 
   --nav-color: rgb(222, 233, 255);
   --nav-hover-color: rgb(175, 200, 250);
@@ -57,6 +61,7 @@ body[data-theme="dark"] {
 body {
   color: var(--font-color);
   background-color: var(--background-color);
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -69,6 +74,7 @@ body {
   flex-direction: column;
   width: 100%;
   margin-left: 5rem;
+  margin-bottom: 5rem;
 }
 
 .search-bar {
@@ -86,7 +92,7 @@ body {
 }
 .search input {
   padding: 5px 5px 5px 10px;
-  border: 3px solid #8D8D8D;
+  border: 3px solid var(--search-bar);
   border-bottom-left-radius: 18px;
   border-top-left-radius: 18px;
   width: 15rem;
@@ -95,8 +101,8 @@ body {
 
 .search button {
   padding: 5px;
-  background-color: #8D8D8D;
-  border: 3px solid #8D8D8D;
+  background-color: var(--search-bar);
+  border: 3px solid var(--search-bar);
   border-bottom-right-radius: 18px;
   border-top-right-radius: 18px;
   font-size: large;
@@ -112,8 +118,8 @@ body {
 select {
   padding: 7px 0px 7px 5px;
   border-radius: 18px;
-  background-color: rgb(255, 255, 255);
-  border: 2px solid #8D8D8D;
+  background-color: rgba(255, 255, 255, 0.479);
+  border: 2px solid var(--search-bar);
 }
 
 .bottom {
@@ -145,13 +151,15 @@ input[type="date"]:focus::before {
   gap: 2.5rem;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
+  padding-top: 20px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  border: 1px solid #988370;
-  background-color: rgba(255, 255, 255, 0.47);
+  border: 1px solid var(--button-color);
+  background-color: var(--background-color);
   border-radius: 10px;
   width: 30rem;
   max-width: 95%;
@@ -360,6 +368,32 @@ input[type="date"]:focus::before {
     opacity: 0;
     display: none;
   }
+}
+.pag{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+}
+.pag button{
+  background-color: #b6845c;
+  color: #ffffff;
+  width: 100px;
+  height: 40px;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+.pag button:hover{
+  background-color: #e2ad83;
+}
+.pag button:active{
+  background-color: #714929;
 }
 
 body.modal-open {
@@ -617,15 +651,17 @@ input::placeholder {
 }
 
 @media only screen and (max-width: 700px) {
+  .wrapper{
+    margin-top: 0rem;
+    margin-bottom: 7rem;
+  }
   .search-bar {
     margin: 0.5rem 0.5rem;
   }
   .search input {
     width: 10rem;
   }
-  .cards{
-    margin-bottom: 5rem;
-  }
+  
   .card {
     margin: 0.5rem 0.5rem;
   }

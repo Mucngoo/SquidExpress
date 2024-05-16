@@ -39,6 +39,8 @@ body[data-theme="dark"] {
   --font-color: rgb(247, 247, 247);
   --sub-font-color: rgb(222, 221, 221);
 
+  --search-bar: rgb(222, 233, 255);
+
   --nav-color: rgb(222, 233, 255);
   --nav-hover-color: rgb(175, 200, 250);
   --nav-active-color: rgb(111, 136, 186);
@@ -46,8 +48,10 @@ body[data-theme="dark"] {
   --box-background-color: rgba(255, 255, 255, 0.19);
 
   --button-color: rgb(184, 180, 197);
-  --button-hover-color: rgb(184, 180, 197);
-  --button-active-color: rgb(184, 180, 197);
+  --button-hover-color: rgb(154, 148, 176);
+  --button-active-color: rgb(93, 88, 107);
+
+  --content-cmt: rgb(96, 108, 127);
 
   --logout-color: rgb(201, 20, 50);
   --logout-hover-color: rgb(246, 99, 99);

@@ -129,8 +129,9 @@ body {
 select {
   padding: 7px 0px 7px 5px;
   border-radius: 18px;
-  background-color: rgba(255, 255, 255, 0.479);
+  background-color: var(--box-background-color);
   border: 2px solid var(--search-bar);
+  color: var(--font-color);
 }
 
 .bottom {
@@ -205,6 +206,7 @@ input[type="date"]:focus::before {
   font-size: 20px;
   background-color: transparent;
   border: none;
+  color: var(--font-color);
 }
 .dropdown button:hover{
   color: #5f5f5f;

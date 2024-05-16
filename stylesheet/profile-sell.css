@@ -115,6 +115,9 @@ body[data-theme="dark"] {
     align-items: center;
     gap: 20px;
   }
+  .profile-name a i{
+    color: var(--font-color);
+  }
   .profile-follow{
     display: flex;
     gap: 15px;

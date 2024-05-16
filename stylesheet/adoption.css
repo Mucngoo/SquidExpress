@@ -1,15 +1,17 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
-:root {
+:root{
   font-size: 17px;
-  --border-color:#8D8D8D;
-  --background-color: #fffdf5;
-  --nav-border: #b8938b;
-  --text-color: #7f4b23;
-  --button-color: #b8938b;
-  --warning-color: #C91432;
+  --background-color: rgb(255, 253, 245);
+  --font-color: rgb(51, 51, 51);
+  --sub-font-color: rgb(92, 92, 92);
+
+  --search-bar: rgb(141, 141, 141);
+
   --nav-color: rgb(127, 75, 35);
   --nav-hover-color: rgb(182, 132, 107);
   --nav-active-color: rgb(226, 173, 131);
@@ -20,6 +22,8 @@
   --button-hover-color: rgb(149, 92, 92);
   --button-active-color: rgb(100, 80, 80);
 
+  --content-cmt: aliceblue;
+
   --logout-color: rgb(201, 20, 50);
   --logout-hover-color: rgb(246, 99, 99);
   --logout-active-color: rgb(154, 73, 73);
@@ -29,24 +33,25 @@
   --cancel-active-color: rgb(46, 46, 46);
 
   --overlay-color: rgba(0, 0, 0, .5);
+}
+body[data-theme="dark"] {
+  --background-color: rgb(35, 40, 48);
+  --font-color: rgb(247, 247, 247);
+  --sub-font-color: rgb(222, 221, 221);
 
-  body[data-theme="dark"]{
-    --text-color: #DEE9FF;
-    --background-color:#232830;
-    --border-color:white;
-    --nav-border: white;
-    --button-color:#8D8D8D;
-    --warning-color: rgb(246, 99, 99);
+  --search-bar: rgb(222, 233, 255);
 
-    --nav-color: rgb(222, 233, 255);
+  --nav-color: rgb(222, 233, 255);
   --nav-hover-color: rgb(175, 200, 250);
   --nav-active-color: rgb(111, 136, 186);
 
   --box-background-color: rgba(255, 255, 255, 0.19);
 
   --button-color: rgb(184, 180, 197);
-  --button-hover-color: rgb(184, 180, 197);
-  --button-active-color: rgb(184, 180, 197);
+  --button-hover-color: rgb(154, 148, 176);
+  --button-active-color: rgb(93, 88, 107);
+
+  --content-cmt: rgb(96, 108, 127);
 
   --logout-color: rgb(201, 20, 50);
   --logout-hover-color: rgb(246, 99, 99);
@@ -57,7 +62,6 @@
   --cancel-active-color: rgb(46, 46, 46);
 
   --overlay-color: rgba(0, 0, 0, .5);
-  }
 }
 
 body {
@@ -96,7 +100,8 @@ body {
 }
 .search input {
   padding: 5px 5px 5px 10px;
-  border: 3px solid var(--border-color);
+  border: 3px solid var(--search-bar);
+  background-color: var(--box-background-color);
   border-bottom-left-radius: 18px;
   border-top-left-radius: 18px;
   width: 17rem;
@@ -105,8 +110,8 @@ body {
 
 .search button {
   padding: 5px;
-  background-color: #8D8D8D;
-  border: 3px solid  #8D8D8D;
+  background-color: var(--search-bar);
+  border: 3px solid  var(--search-bar);
   border-bottom-right-radius: 18px;
   border-top-right-radius: 18px;
   font-size: large;
@@ -122,8 +127,9 @@ body {
 select {
   padding: 7px 0px 7px 5px;
   border-radius: 18px;
-  background-color: rgb(255, 255, 255);
-  border: 2px solid  var(--border-color);
+  background-color: var(--box-background-color);
+  border: 2px solid  var(--search-bar);
+  color: var(--font-color);
 }
 .cards {
   display: flex;
@@ -137,8 +143,8 @@ select {
   width: 200px;
   max-width: 90%;
   height: 300px;
-  border: 1px solid #988270;
-  background-color: rgba(255, 255, 255, 0.47);
+  border: 1px solid var(--button-color);
+  background-color: var(--box-background-color);
   border-radius: 14px;
   display: flex;
   flex-direction: column;
@@ -151,9 +157,9 @@ select {
   padding: 8px 10px;
 }
 .money{
-  font-size: 12px;
-  font-weight: 200;
-  color: grey;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--sub-font-color);
 }
 .btn{
   display: flex;
@@ -166,12 +172,18 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--button-color);
+  color: white;
   border-radius: 15px;
   width: 80px;
   height: 25px;
   cursor: pointer;
+}
+.see-more:hover{
+  background-color: var(--button-hover-color);
+}
+.see-more:active{
+  background-color: var(--button-active-color);
 }
 .pag{
   display: flex;
@@ -194,7 +206,7 @@ select {
   height: 100vh;
   position: fixed;
   background-color: var(--background-color);
-  border-right: 1px solid var(--border-color);
+  border-right: 1px solid var(--button-color);
   font-family: 'Kreon', sans-serif;
   font-weight: bold;
 }
@@ -226,7 +238,7 @@ select {
   align-items: center;
   text-decoration: none;
   height: 4rem;
-  color: var(--text-color);
+  color: var(--nav-color);
 }
 
 @media only screen and (max-width: 1300px) {
@@ -249,7 +261,7 @@ select {
     bottom: 0;
     width: 100%;
     height: 4rem;
-    border-top: 2px solid var(--border-color);
+    border-top: 2px solid var(--button-color);
     border-right: none;
   }
 
@@ -270,7 +282,7 @@ select {
   }
   .search input {
     padding: 5px 5px 5px 10px;
-    border: 3px solid  var(--border-color);
+    border: 3px solid  var(--button-color);
     border-bottom-left-radius: 18px;
     border-top-left-radius: 18px;
     width: 8rem;
@@ -279,8 +291,8 @@ select {
   
   .search button {
     padding: 5px;
-    background-color: #8D8D8D;
-    border: 3px solid #8D8D8D;
+    background-color: var(--search-bar);
+    border: 3px solid var(--search-bar);
     border-bottom-right-radius: 18px;
     border-top-right-radius: 18px;
     font-size: large;
@@ -320,6 +332,6 @@ select {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--background-color);
+  background-color: var(--button-color);
   border-radius: 20px;
 }

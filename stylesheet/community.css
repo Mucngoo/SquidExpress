@@ -192,7 +192,7 @@ input[type="date"]:focus::before {
   height: 50px;
   border-radius: 50%;
 }
-.hehe{
+.img-post{
   display: flex;
   gap: 5px;
 }

@@ -123,7 +123,9 @@
                     <input type="text" id="username" name="username" placeholder="Enter new username" required>
                     <button type="submit">Save</button>
 
-                    <div class="error" id="usernameError"></div>
+                    <div class="error" id="usernameError">
+                        <li>Username is required.</li>
+                    </div>
                 </div>
             </form>
         </div>
@@ -136,16 +138,14 @@
         </div>
     
         <div class="modal-body">
-           <form id="passwordChange">
+           <form id="passwordChange" novalidate>
                 <div>
                     <label for="oldPassword">Enter old Password</label>
                     <div class="form__input">
                         <input type="password" id="oldPassword" name="oldPassword" placeholder="Old password" required>
                         <span><i class="fa-regular fa-eye-slash"></i></span>
                     </div>
-                    <div class="error hidden">
-                        <li>Old password is incorrect.</li>
-                    </div>
+                    <div class="error" id="oldPasswordError"></div>
                 </div>
 
                 <div>
@@ -154,7 +154,7 @@
                         <input type="password" id="newPassword" name="newPassword" placeholder="New password" required>
                         <span><i class="fa-regular fa-eye-slash"></i></span>
                     </div>
-                    <div class="error hidden">
+                    <div class="error" id="newPasswordError">
                         <li>Password must be at least 8 characters.</li>
                         <li>Password must contain at least one uppercase letter.</li>
                         <li>Password must contain at least one lowercase letter.</li>
@@ -169,7 +169,7 @@
                         <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
                         <span><i class="fa-regular fa-eye-slash"></i></span>
                     </div>
-                    <div class="error hidden">
+                    <div class="error hidden" id="confirmPasswordError">
                         <li>Password does not match.</li>
                     </div>
                 </div>

@@ -38,40 +38,43 @@
         <div class="wrapper">
             <form>
                 <div class="search-bar">
+                    <div class="hoho">
                         <div class="manage">Manage Posts</div>
 
-                        <div class="filter">
-                            <div class="top">
-                                <div class="search">
-                                    <input type="text" placeholder="Search post title...">
-                                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                                </div>
-                                <div class="sortby">
-                                    <select name="sortby" id="sortby">
-                                        <option disabled selected>Sort by</option> 
-                                        <option>Earliest post</option>
-                                        <option>Latest post</option>
-                                    </select>
-                                </div>
+                        <div class="top">
+                            <div class="search">
+                                <input type="text" placeholder="Search post title...">
+                                <button><i class="fa-solid fa-magnifying-glass"></i></button>
                             </div>
-                            
-                            <div class="bottom">
-                                <p>Filter:</p>
-                                <div class="start-date">
-                                    <input type="date" placeholder="Start date">
-                                </div>
-                                <div class="end-date">
-                                    <input type="date" placeholder="End date">
-                                </div>
-                                <div class="sortby">
-                                    <select name="sortby" id="sortby">
-                                        <option disabled selected>Posts</option> 
-                                        <option>All post</option>
-                                        <option>Reported post</option>
-                                    </select>
-                                </div>
+                            <div class="sortby">
+                                <select name="sortby" id="sortby">
+                                    <option disabled selected>Sort by</option> 
+                                    <option>Earliest post</option>
+                                    <option>Latest post</option>
+                                </select>
                             </div>
                         </div>
+
+                        <div class="middle">
+                            <div class="sortby sortpost">
+                                <select name="sortby" id="sortby">
+                                    <option disabled selected>Posts</option> 
+                                    <option>All post</option>
+                                    <option>Reported post</option>
+                                </select>
+                            </div>
+                        </div>   
+                    </div>
+                            
+                        <div class="bottom">
+                            <p>Filter:</p>
+                            <div class="start-date">
+                                <input type="date" placeholder="Start date">
+                            </div>
+                            <div class="end-date">
+                                <input type="date" placeholder="End date">
+                            </div>
+                        </div>  
                 </div>
             </form>
 
@@ -185,6 +188,9 @@
                         <div class="delete-btn" data-modal-target="#deleteModal">Delete</div>
                     </div>
                 </div>        
+            </div>
+            <div class="pag">
+                <button>Load more</button>
             </div>
         </div>
     </div>

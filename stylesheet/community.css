@@ -96,6 +96,9 @@ body {
 .search {
   display: flex;
 }
+.search input::placeholder{
+  color: var(--font-color);
+}
 .search::placeholder {
   color: var(--font-color);
 }

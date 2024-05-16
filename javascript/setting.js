@@ -165,7 +165,7 @@ usernameForm.addEventListener('submit', function(e) {
         error = true;
         username.classList.add('error-input');
         username.focus();
-        errorList += '<li>Username is required</li>';
+        errorList += '<li>Username is required.</li>';
     }
 
 	let errors = "<ul class='error-list'>" + errorList + "</ul>";
@@ -175,4 +175,160 @@ usernameForm.addEventListener('submit', function(e) {
 	}
 
 	usernameForm.submit();
+});
+
+const oldPassword = document.querySelector('#oldPassword');
+oldPassword.addEventListener('focusout', function(e) {
+
+	oldPassword.classList.remove('error-input');
+
+	let error = false;
+	let errorList = '';
+
+	if (oldPassword.value === '' || oldPassword.value == null) {
+        error = true;
+        oldPassword.classList.add('error-input');
+        errorList += '<li>Please enter a password.</li>';
+    }
+
+	let errors = "<ul class='error-list'>" + errorList + "</ul>";
+	if (error == true) {
+		document.querySelector('#oldPasswordError').innerHTML = errors;
+	} else {
+		document.querySelector('#oldPasswordError').innerHTML = '';
+	}
+});
+
+const newPassword = document.querySelector('#newPassword');
+newPassword.addEventListener('focusout', function() {
+
+	newPassword.classList.remove('error-input');
+
+	//regex
+	const lowerCaseLetters = /[a-z]/;
+    const upperCaseLetters = /[A-Z]/;
+    const numbers = /[0-9]/;
+    const specialCharacters = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+
+	let error = false;
+	let errorList = '';
+
+	if (newPassword.value.length < 8) {
+        error = true;
+        newPassword.classList.add('error-input');
+        errorList += '<li>Password must be at least 8 characters.</li>';
+    }
+
+    if (!lowerCaseLetters.test(newPassword.value)) {
+        error = true;
+        newPassword.classList.add('error-input');
+        errorList += '<li>Password must contain at least one lowercase letter.</li>';
+    }
+
+    if (!upperCaseLetters.test(newPassword.value)) {
+        error = true;
+        newPassword.classList.add('error-input');
+        errorList += '<li>Password must contain at least one uppercase letter.</li>';
+    }
+
+    if (!numbers.test(newPassword.value)) {
+        error = true;
+        newPassword.classList.add('error-input');
+        errorList += '<li>Password must contain at least one number.</li>';
+    }
+
+    if (!specialCharacters.test(newPassword.value)) {
+        error = true;
+        newPassword.classList.add('error-input');
+        errorList += '<li>Password must contain at least one special character.</li>';
+    }
+
+	let errors = "<ul class='error-list'>" + errorList + "</ul>";
+	if (error == true) {
+		document.querySelector('#newPasswordError').innerHTML = errors;
+	} else {
+		document.querySelector('#newPasswordError').innerHTML = '';
+	}
+});
+
+const confirmPassword = document.querySelector('#confirmPassword');
+confirmPassword.addEventListener('focusout', function() {
+
+	confirmPassword.classList.remove('error-input');
+
+	let error = false;
+	let errorList = '';
+
+	if (newPassword.value !== confirmPassword.value) {
+		error = true;
+		confirmPassword.classList.add('error-input');
+		errorList += '<li>Password does not match.</li>';
+	}
+
+	let errors = "<ul class='error-list'>" + errorList + "</ul>";
+	if (error == true) {
+		document.querySelector('#confirmPasswordError').innerHTML = errors;
+	} else {
+		document.querySelector('#confirmPasswordError').innerHTML = '';
+	}
+});
+
+const passwordForm = document.querySelector('#passwordChange');
+
+passwordForm.addEventListener('submit', function(e) {
+	e.stopPropagation();
+	
+	//document
+	const oldPassword = document.querySelector('#oldPassword');
+	const newPassword = document.querySelector('#newPassword');
+	const confirmPassword = document.querySelector('#confirmPassword');
+
+	//regex
+	const lowerCaseLetters = /[a-z]/;
+    const upperCaseLetters = /[A-Z]/;
+    const numbers = /[0-9]/;
+    const specialCharacters = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+
+	let error = true;
+
+	if (oldPassword.value !== '' || oldPassword.value != null) {
+        error = false;
+		oldPassword.classList.remove('error-input');
+    }
+
+    if (newPassword.value.length >= 8) {
+		error = false;
+		newPassword.classList.remove('error-input');
+    }
+
+    if (lowerCaseLetters.test(newPassword.value)) {
+        error = false;
+		newPassword.classList.remove('error-input');
+    }
+
+    if (upperCaseLetters.test(newPassword.value)) {
+        error = false;
+		newPassword.classList.remove('error-input');
+    }
+
+    if (numbers.test(newPassword.value)) {
+        error = false;
+		newPassword.classList.remove('error-input');
+    }
+
+    if (specialCharacters.test(newPassword.value)) {
+        error = false;
+		newPassword.classList.remove('error-input');
+	}
+
+    if (newPassword.value === confirmPassword.value) {
+        error = false;
+		confirmPassword.classList.remove('error-input');
+	}
+
+	if (error = false) {
+		passwordForm.submit();
+	} else {
+		e.preventDefault();
+	}
 });

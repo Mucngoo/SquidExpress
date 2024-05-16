@@ -123,9 +123,7 @@
                     <input type="text" id="username" name="username" placeholder="Enter new username" required>
                     <button type="submit">Save</button>
 
-                    <div class="error" id="usernameError">
-                        <li>Username is required.</li>
-                    </div>
+                    <div class="error" id="usernameError"></div>
                 </div>
             </form>
         </div>
@@ -154,13 +152,7 @@
                         <input type="password" id="newPassword" name="newPassword" placeholder="New password" required>
                         <span><i class="fa-regular fa-eye-slash"></i></span>
                     </div>
-                    <div class="error" id="newPasswordError">
-                        <li>Password must be at least 8 characters.</li>
-                        <li>Password must contain at least one uppercase letter.</li>
-                        <li>Password must contain at least one lowercase letter.</li>
-                        <li>Password must contain at least one number.</li>
-                        <li>Password must contain at least one special character.</li>
-                    </div>
+                    <div class="error" id="newPasswordError"></div>
                 </div>
 
                 <div>
@@ -169,9 +161,7 @@
                         <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
                         <span><i class="fa-regular fa-eye-slash"></i></span>
                     </div>
-                    <div class="error hidden" id="confirmPasswordError">
-                        <li>Password does not match.</li>
-                    </div>
+                    <div class="error" id="confirmPasswordError"></div>
                 </div>
 
                 <button type="submit">Change password</button>

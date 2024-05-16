@@ -1,6 +1,58 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 :root{
-    font-size: 17px;
-  }
+  font-size: 17px;
+  --background-color: rgb(255, 253, 245);
+  --font-color: rgb(51, 51, 51);
+
+  --nav-color: rgb(127, 75, 35);
+  --nav-hover-color: rgb(182, 132, 107);
+  --nav-active-color: rgb(226, 173, 131);
+
+  --box-background-color: rgba(255, 255, 255, 0.614);
+
+  --button-color: rgb(184, 147, 139);
+  --button-hover-color: rgb(149, 92, 92);
+  --button-active-color: rgb(100, 80, 80);
+
+  --logout-color: rgb(201, 20, 50);
+  --logout-hover-color: rgb(246, 99, 99);
+  --logout-active-color: rgb(154, 73, 73);
+
+  --cancel-color: rgb(111, 111, 111);
+  --cancel-hover-color: rgb(146, 146, 146);
+  --cancel-active-color: rgb(46, 46, 46);
+
+  --overlay-color: rgba(0, 0, 0, .5);
+}
+body[data-theme="dark"] {
+  --background-color: rgb(35, 40, 48);
+  --font-color: rgb(247, 247, 247);
+
+  --nav-color: rgb(222, 233, 255);
+  --nav-hover-color: rgb(175, 200, 250);
+  --nav-active-color: rgb(111, 136, 186);
+
+  --box-background-color: rgba(255, 255, 255, 0.19);
+
+  --button-color: rgb(184, 180, 197);
+  --button-hover-color: rgb(184, 180, 197);
+  --button-active-color: rgb(184, 180, 197);
+
+  --logout-color: rgb(201, 20, 50);
+  --logout-hover-color: rgb(246, 99, 99);
+  --logout-active-color: rgb(154, 73, 73);
+
+  --cancel-color: rgb(111, 111, 111);
+  --cancel-hover-color: rgb(146, 146, 146);
+  --cancel-active-color: rgb(46, 46, 46);
+
+  --overlay-color: rgba(0, 0, 0, .5);
+}
   
   body{
     color:black;
@@ -87,6 +139,138 @@
   }
   .description{
     padding: 8px 10px;
+  }
+  .description div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dropdown{
+    padding-right: 5px;
+  }
+  .dropdown button{
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+  }
+  .dropdown button:hover{
+    color: #5f5f5f;
+  }
+  .dropdown button:active{
+    color: #aeaeae;
+  }
+  .report{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 2px 2px #888888;
+    padding: 4px 4px;
+    font-size: 12px;
+    position: absolute;
+  }
+  .report:hover{
+    background-color: #ff4949;
+    color: rgb(241, 241, 241);
+  }
+  .hidden{
+    display: none !important;
+  }
+  body.modal-open {
+    overflow: hidden;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 600px;
+    max-width: 95%;
+    height: 700px;
+    overflow-y: scroll;
+  }
+  #report{
+    height: 400px;
+    width: 600px;
+    overflow: hidden;
+  }
+  #report .modal-header2{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 15px;
+  }
+  #report .modal-header2 button{
+    font-size: 3rem;
+    font-weight: 200;
+    background-color: transparent;
+    border: none;
+  }
+  #report .modal-body2{
+    font-size: 20px;
+    display: flex;
+    padding: 50px 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  #report .modal-body2 div{
+    display: flex;
+    gap: 1rem;
+  }
+  #report .modal-body2 div button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 8rem;
+    border-radius: 15px;
+    border: none;
+  }
+  .reportBtn{
+    background-color: var(--logout-color);
+    color: var(--background-color);
+  }
+  .reportBtn:hover{
+    background-color: var(--logout-hover-color);
+  }
+  .reportBtn:active{
+    background-color: var(--logout-active-color);
+  }
+  .cancelBtn{
+    background-color: var(--cancel-color);
+    color: var(--background-color);
+  }
+  .cancelBtn:hover{
+    background-color: var(--cancel-hover-color);
+  }
+  .cancelBtn:active{
+    background-color: var(--cancel-active-color);
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
   }
   .money{
     font-size: 12px;

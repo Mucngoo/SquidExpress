@@ -97,7 +97,7 @@ body {
   display: flex;
 }
 .search::placeholder {
-  color: var(--sub-font-color);
+  color: var(--font-color);
 }
 .search input {
   padding: 5px 5px 5px 10px;
@@ -144,12 +144,13 @@ input[type="date"] {
   background-color: white;
   border: 2px solid var(--search-bar);
   border-radius: 0.4rem;
-  font-family: sans-serif;
-  color: var(--search-bar);
+  font-family:"Inter", sans-serif;
+  color: black;
 }
 input[type="date"]::before{
-  color: var(--search-bar);
+  color: black;
   content: attr(placeholder);
+  font-family: 'Inter', sans-serif;
 }
 input[type="date"]:focus::before {
   content: "" !important;

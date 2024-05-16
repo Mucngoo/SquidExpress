@@ -97,6 +97,7 @@ body {
   font-size: 30px;
   font-weight: 550;
   padding: 0px 10px;
+  font-family: 'Kreon', sans-serif;
 }
 
 .search {
@@ -122,6 +123,10 @@ body {
   color: #fff;
   height: 35px;
   width: 40px;
+}
+
+.search input::placeholder{
+  color: var(--font-color);
 }
 
 .search button:hover {
@@ -576,6 +581,7 @@ input::placeholder {
 
 .navbar {
   font-family: "Kreon", sans-serif;
+  font-weight: bold;
   width: 12rem;
   height: 100vh;
   position: fixed;
@@ -626,6 +632,24 @@ input::placeholder {
     display: none;
   }
 }
+input[type="date"] {
+  padding: 2px 3px 2px 8px;
+  background-color: white;
+  border: 2px solid var(--search-bar);
+  border-radius: 0.4rem;
+  font-family:"Inter", sans-serif;
+  color: black;
+}
+input[type="date"]::before{
+  color: black;
+  content: attr(placeholder);
+  font-family: 'Inter', sans-serif;
+}
+input[type="date"]:focus::before {
+  content: "" !important;
+  display: none;
+}
+
 
 @media only screen and (max-width: 750px) {
   .search-bar {

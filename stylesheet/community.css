@@ -8,6 +8,7 @@
   font-size: 17px;
   --background-color: rgb(255, 253, 245);
   --font-color: rgb(51, 51, 51);
+  --sub-font-color: rgb(92, 92, 92);
 
   --search-bar: rgb(141, 141, 141);
 
@@ -20,6 +21,8 @@
   --button-color: rgb(184, 147, 139);
   --button-hover-color: rgb(149, 92, 92);
   --button-active-color: rgb(100, 80, 80);
+
+  --content-cmt: aliceblue;
 
   --logout-color: rgb(201, 20, 50);
   --logout-hover-color: rgb(246, 99, 99);
@@ -34,6 +37,7 @@
 body[data-theme="dark"] {
   --background-color: rgb(35, 40, 48);
   --font-color: rgb(247, 247, 247);
+  --sub-font-color: rgb(222, 221, 221);
 
   --search-bar: rgb(222, 233, 255);
 
@@ -44,8 +48,10 @@ body[data-theme="dark"] {
   --box-background-color: rgba(255, 255, 255, 0.19);
 
   --button-color: rgb(184, 180, 197);
-  --button-hover-color: rgb(184, 180, 197);
-  --button-active-color: rgb(184, 180, 197);
+  --button-hover-color: rgb(154, 148, 176);
+  --button-active-color: rgb(93, 88, 107);
+
+  --content-cmt: rgb(96, 108, 127);
 
   --logout-color: rgb(201, 20, 50);
   --logout-hover-color: rgb(246, 99, 99);
@@ -93,6 +99,8 @@ body {
 .search input {
   padding: 5px 5px 5px 10px;
   border: 3px solid var(--search-bar);
+  background-color: var(--box-background-color);
+  color: var(--font-color);
   border-bottom-left-radius: 18px;
   border-top-left-radius: 18px;
   width: 15rem;
@@ -106,7 +114,7 @@ body {
   border-bottom-right-radius: 18px;
   border-top-right-radius: 18px;
   font-size: large;
-  color: #fff;
+  color: var(--nav-hover-color);
   height: 35px;
   width: 40px;
 }
@@ -221,7 +229,7 @@ input[type="date"]:focus::before {
   gap: 5px;
 }
 .post-title {
-  color: #606060;
+  color: var(--sub-font-color);
   font-size: smaller;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -235,7 +243,7 @@ input[type="date"]:focus::before {
 
 .see-more-btn {
   width: 80px;
-  background-color: #b6845c;
+  background-color: var(--button-color);
   color: #fffdf5;
   border-radius: 10px;
   border: none;
@@ -244,11 +252,11 @@ input[type="date"]:focus::before {
 }
 
 .see-more-btn:hover {
-  background-color: #e2ad83;
+  background-color: var(--button-hover-color);
 }
 
 .see-more-btn:active {
-  background-color: #714929;
+  background-color: var(--button-active-color);
 }
 
 .card-body {
@@ -415,6 +423,9 @@ body.modal-open {
   height: 700px;
   overflow-y: scroll;
 }
+.modal [data-close-button]{
+  color: var(--font-color);
+}
 #report{
   height: 400px;
   width: 600px;
@@ -481,7 +492,7 @@ body.modal-open {
   flex-direction: column;
   padding: 10px;
   border-bottom: 1px solid var(--button-color);
-  background-color: white;
+  background-color: var(--background-color);
 }
 .information {
   display: flex;
@@ -493,7 +504,7 @@ body.modal-open {
   align-items: center;
 }
 .close-button {
-  background-color: #ffffff;
+  background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 2rem;
@@ -517,7 +528,7 @@ body.modal-open {
 }
 .caption{
   font-size: 16px;
-  color: #606060;
+  color: var(--sub-font-color);
 }
 .text{
   display: flex;
@@ -538,20 +549,20 @@ body.modal-open {
   border-radius: 50%;
 }
 .username{
-  color:#3a3a3a;
+  color: var(--font-color);
 }
 .content {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
   padding: 10px 15px;
-  background-color: aliceblue;
+  background-color: var(--content-cmt);
   border-radius: 20px;
   max-width: 90%;
   word-wrap: break-word;
 }
 .content div:nth-child(2){
-  color: #6e6e6e;
+  color: var(--sub-font-color);
 }
 
 .modal-cmt {
@@ -599,6 +610,7 @@ input::placeholder {
 }
 
 .navbar {
+  font-family: "Kreon", sans-serif;
   width: 12rem;
   height: 100vh;
   position: fixed;
@@ -703,6 +715,6 @@ input::placeholder {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #B8938B;
+  background-color: var(--button-color);
   border-radius: 20px;
 }

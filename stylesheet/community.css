@@ -96,8 +96,11 @@ body {
 .search {
   display: flex;
 }
+.search input::placeholder{
+  color: var(--font-color);
+}
 .search::placeholder {
-  color: var(--sub-font-color);
+  color: var(--font-color);
 }
 .search input {
   padding: 5px 5px 5px 10px;
@@ -129,8 +132,9 @@ body {
 select {
   padding: 7px 0px 7px 5px;
   border-radius: 18px;
-  background-color: rgba(255, 255, 255, 0.479);
+  background-color: var(--box-background-color);
   border: 2px solid var(--search-bar);
+  color: var(--font-color);
 }
 
 .bottom {
@@ -144,12 +148,13 @@ input[type="date"] {
   background-color: white;
   border: 2px solid var(--search-bar);
   border-radius: 0.4rem;
-  font-family: sans-serif;
-  color: var(--search-bar);
+  font-family:"Inter", sans-serif;
+  color: black;
 }
 input[type="date"]::before{
-  color: var(--search-bar);
+  color: black;
   content: attr(placeholder);
+  font-family: 'Inter', sans-serif;
 }
 input[type="date"]:focus::before {
   content: "" !important;
@@ -204,6 +209,7 @@ input[type="date"]:focus::before {
   font-size: 20px;
   background-color: transparent;
   border: none;
+  color: var(--font-color);
 }
 .dropdown button:hover{
   color: #5f5f5f;

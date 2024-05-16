@@ -145,3 +145,34 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 });
+
+const usernameForm = document.querySelector('#usernameChange');
+
+usernameForm.addEventListener('submit', function(e) {
+	e.preventDefault();
+	e.stopPropagation();
+
+	//document
+	const username = document.querySelector('#username');
+
+	//remove error
+	username.classList.remove('error-input');
+
+	let error = false;
+	let errorList = '';
+
+	if (username.value === '' || username.value === null) {
+        error = true;
+        username.classList.add('error-input');
+        username.focus();
+        errorList += '<li>Username is required</li>';
+    }
+
+	let errors = "<ul class='error-list'>" + errorList + "</ul>";
+	if (error == true) {
+		document.querySelector('#usernameError').innerHTML = errors;
+		return;
+	}
+
+	usernameForm.submit();
+});

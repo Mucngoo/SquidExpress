@@ -118,10 +118,12 @@
         </div>
     
         <div class="modal-body">
-            <form id="usernameChange">
+            <form id="usernameChange" novalidate>
                 <div>
                     <input type="text" id="username" name="username" placeholder="Enter new username" required>
                     <button type="submit">Save</button>
+
+                    <div class="error" id="usernameError"></div>
                 </div>
             </form>
         </div>

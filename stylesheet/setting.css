@@ -278,7 +278,7 @@
     color: whitesmoke;
   }
   #usernameModal{
-    height: 130px;
+    height: auto;
     width: 400px;
   }
   #usernameModal .modal-header div{
@@ -305,6 +305,7 @@
   #usernameModal .modal-body form div{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 12px 10px;
   }
   #passwordModal{

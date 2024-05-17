@@ -159,19 +159,20 @@ usernameForm.addEventListener('submit', function(e) {
 	username.classList.remove('error-input');
 
 	let error = false;
-	let errorList = '';
+	let errors= '';
 
 	if (username.value === '' || username.value === null) {
         error = true;
         username.classList.add('error-input');
         username.focus();
-        errorList += '<li>Username is required.</li>';
+        errors += '<li>Username is required.</li>';
     }
 
-	let errors = "<ul class='error-list'>" + errorList + "</ul>";
 	if (error == true) {
 		document.querySelector('#usernameError').innerHTML = errors;
 		return;
+	} else {
+		document.querySelector('#usernameError').innerHTML = '';
 	}
 
 	usernameForm.submit();
@@ -276,6 +277,7 @@ confirmPassword.addEventListener('focusout', function() {
 const passwordForm = document.querySelector('#passwordChange');
 
 passwordForm.addEventListener('submit', function(e) {
+	e.preventDefault();
 	e.stopPropagation();
 	
 	//document
@@ -289,46 +291,86 @@ passwordForm.addEventListener('submit', function(e) {
     const numbers = /[0-9]/;
     const specialCharacters = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
 
-	let error = true;
+	let oldPasswordError = false;
+	let newPasswordError = false;
+	let confirmPasswordError = false;
+	
+	let oldPasswordErrorList = '';
+	let newPasswordErrorList = '';
+	let confirmPasswordErrorList = '';
 
-	if (oldPassword.value !== '' || oldPassword.value != null) {
-        error = false;
-		oldPassword.classList.remove('error-input');
+	if (oldPassword.value === '' || oldPassword.value == null) {
+        oldPasswordError = true;
+        oldPassword.classList.add('error-input');
+        oldPasswordErrorList += '<li>Please enter a password.</li>';
     }
 
-    if (newPassword.value.length >= 8) {
-		error = false;
-		newPassword.classList.remove('error-input');
+	if (newPassword.value.length < 8) {
+        newPasswordError = true;
+        newPassword.classList.add('error-input');
+        newPasswordErrorList += '<li>Password must be at least 8 characters.</li>';
     }
 
-    if (lowerCaseLetters.test(newPassword.value)) {
-        error = false;
-		newPassword.classList.remove('error-input');
+    if (!lowerCaseLetters.test(newPassword.value)) {
+        newPasswordError = true;
+        newPassword.classList.add('error-input');
+        newPasswordErrorList += '<li>Password must contain at least one lowercase letter.</li>';
     }
 
-    if (upperCaseLetters.test(newPassword.value)) {
-        error = false;
-		newPassword.classList.remove('error-input');
+    if (!upperCaseLetters.test(newPassword.value)) {
+        newPasswordError = true;
+        newPassword.classList.add('error-input');
+        newPasswordErrorList += '<li>Password must contain at least one uppercase letter.</li>';
     }
 
-    if (numbers.test(newPassword.value)) {
-        error = false;
-		newPassword.classList.remove('error-input');
+    if (!numbers.test(newPassword.value)) {
+        newPasswordError = true;
+        newPassword.classList.add('error-input');
+        newPasswordErrorList += '<li>Password must contain at least one number.</li>';
     }
 
-    if (specialCharacters.test(newPassword.value)) {
-        error = false;
-		newPassword.classList.remove('error-input');
+    if (!specialCharacters.test(newPassword.value)) {
+        newPasswordError = true;
+        newPassword.classList.add('error-input');
+        newPasswordErrorList += '<li>Password must contain at least one special character.</li>';
+    }
+
+	if (newPassword.value !== confirmPassword.value) {
+		confirmPasswordError = true;
+		confirmPassword.classList.add('error-input');
+		confirmPasswordErrorList += '<li>Password does not match.</li>';
 	}
 
-    if (newPassword.value === confirmPassword.value) {
-        error = false;
-		confirmPassword.classList.remove('error-input');
-	}
-
-	if (error = false) {
-		passwordForm.submit();
+	let oldPasswordErrors = "<ul class='error-list'>" + oldPasswordErrorList + "</ul>";
+	let newPasswordErrors = "<ul class='error-list'>" + newPasswordErrorList + "</ul>";
+	let confirmPasswordErrors = "<ul class='error-list'>" + confirmPasswordErrorList + "</ul>";
+	
+	if (oldPasswordError == true) {
+		if (document.querySelector('#oldPasswordError').innerHTML === '') {
+			document.querySelector('#oldPasswordError').innerHTML = oldPasswordErrors;
+		}
+		return;
 	} else {
-		e.preventDefault();
+		document.querySelector('#oldPasswordError').innerHTML = '';
 	}
+	
+	if (newPasswordError == true) {
+		if (document.querySelector('#newPasswordError').innerHTML === '') {
+			document.querySelector('#newPasswordError').innerHTML = newPasswordErrors;
+		}
+		return;
+	} else {
+		document.querySelector('#newPasswordError').innerHTML = '';
+	}
+	
+	if (confirmPasswordError == true) {
+		if (document.querySelector('#confirmPasswordError').innerHTML === '') {
+			document.querySelector('#confirmPasswordError').innerHTML = confirmPasswordErrors;
+		}
+		return;
+	} else {
+		document.querySelector('#confirmPasswordError').innerHTML = '';
+	}
+	
+	passwordForm.submit();
 });

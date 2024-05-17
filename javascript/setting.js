@@ -147,7 +147,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const usernameForm = document.querySelector('#usernameChange');
-
 usernameForm.addEventListener('submit', function(e) {
 	e.preventDefault();
 	e.stopPropagation();
@@ -275,7 +274,6 @@ confirmPassword.addEventListener('focusout', function() {
 });
 
 const passwordForm = document.querySelector('#passwordChange');
-
 passwordForm.addEventListener('submit', function(e) {
 	e.preventDefault();
 	e.stopPropagation();

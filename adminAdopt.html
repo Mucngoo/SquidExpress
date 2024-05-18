@@ -19,24 +19,30 @@
     <div class="main">
 
         <div class="wrapper">
-            <img src="images/dogcat.svg" alt="adopt">
 
             <form>
                 <div class="search-bar">
                     <div class="top">
-                        <div class="search">
-                            <input type="text" placeholder="Search...">
-                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <div class="bigText">
+                            <h2>Manage sell posts</h2>
                         </div>
-                        <div class="sortby">
-                            <select name="sortby" id="sortby">
-                                <option disabled selected>Type of pet</option> 
-                                <option>Cat</option>
-                                <option>Dog</option>
-                            </select>
+                        <div class="hehe">
+                            <div class="search">
+                                <input type="text" placeholder="Search user...">
+                                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                            <div class="sortby">
+                                <select name="sortby" id="sortby">
+                                    <option disabled selected>Type of pet</option> 
+                                    <option>Dog</option>
+                                    <option>Cat</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
+                
+                    </div>                    
                 </div>
+                
             </form>
 
             <div class="cards">
@@ -174,19 +180,33 @@
             
         </div>
         
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main Navigation">
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/admin/users" class="nav-link" aria-label="Users List">
                         <i class="fa-solid fa-people-group"></i>
                         <p class="nav-text">Users List</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/admin/post" class="nav-link" aria-label="Manage Posts">
                         <i class="fa-solid fa-file"></i>
                         <p class="nav-text">Manage Posts</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="" class="nav-link" aria-label="Manage Posts">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <p class="nav-text">Manage Adoption</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="/admin/setting" class="nav-link" aria-label="Setting">
+                        <i class="fa-solid fa-gear"></i>
+                        <p class="nav-text">Setting</p>
                     </a>
                 </li>
             </ul>

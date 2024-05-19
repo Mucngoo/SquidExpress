@@ -259,6 +259,8 @@ a{
 }
 .bigText{
   display: flex;
+  font-family: 'Kreon', sans-serif;
+  color: var(--nav-color) ;
 }
 .bigText h2{
   font-size: 2rem;

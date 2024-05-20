@@ -370,6 +370,7 @@ body[data-theme="dark"] {
     position: fixed;
     background-color: var(--background-color);
     border-right: 2px solid var(--button-color);
+    font-family: 'Kreon', sans-serif;
   }
   
   .nav-list{

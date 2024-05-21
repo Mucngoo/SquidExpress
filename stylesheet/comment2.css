@@ -518,7 +518,7 @@ body.modal-open {
 }
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .wrapper {
     margin-bottom: 4rem;
     flex-direction: column;
@@ -542,6 +542,9 @@ body.modal-open {
   }
   .user-comment{
     position: static;
+  }
+  .comment-input {
+    width: 13rem;
   }
 
   .navbar {

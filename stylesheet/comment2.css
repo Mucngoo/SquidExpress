@@ -126,6 +126,10 @@ body {
   height: 50px;
   border-radius: 50%;
 }
+.img-post{
+  display: flex;
+  gap: 5px;
+}
 .dropdown{
   padding-top: 3px;
 }
@@ -508,14 +512,13 @@ body.modal-open {
     padding-left: 0;
   }
   .navbar {
-    width: 4rem;
+    width: 3.7rem;
   }
 
   .nav-link p {
     display: none;
   }
 }
-
 
 @media only screen and (max-width: 1000px) {
   .wrapper {

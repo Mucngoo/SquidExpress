@@ -70,6 +70,7 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
+  overflow-y: hidden;
 }
 
 .main {
@@ -102,7 +103,7 @@ body {
   flex-direction: column;
   background-color: var(--background-color);
   width: 31.3rem;
-  max-width: 95%;
+  max-width: 100%;
 }
 .card-header {
   display: flex;
@@ -296,6 +297,68 @@ body {
     opacity: 0;
     display: none;
   }
+}
+.modal-footer{
+  height: 34.5rem;
+}
+.hehe{
+  height: 26.5rem;
+  overflow-y: scroll;
+}
+.cmt-section {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.cmt-section img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.username{
+  color: var(--font-color);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 10px 15px;
+  background-color: var(--content-cmt);
+  border-radius: 20px;
+  max-width: 90%;
+  word-wrap: break-word;
+}
+.content div:nth-child(2){
+  color: var(--sub-font-color);
+}
+
+.modal-cmt {
+  background-color: var(--background-color);
+  border-top: 1px solid var(--button-color);
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+.modal-cmt img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.modal-cmt form{
+  display: flex;
+  gap: 0.5rem;
+}
+.comment-input {
+  border-radius: 15px;
+  width: 22rem;
+  max-width: 90%;
+  height: 40px;
+  padding: 5px;
+}
+
+input::placeholder {
+  color: #3a3a3a;
 }
 
 .navbar {

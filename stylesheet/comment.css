@@ -70,7 +70,6 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  overflow-y: hidden;
 }
 
 .main {
@@ -82,28 +81,15 @@ body {
   width: 100%;
   padding-left: 12rem;
 }
-
-.image{
-  width: 800px;
-  max-width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(25, 25, 25);
-}
-
-.image img{
-  width: 70%;
-  max-height: 100%;
-  object-fit: cover;
-}
 .comment-section {
   display: flex;
   flex-direction: column;
   background-color: var(--background-color);
-  width: 31.3rem;
-  max-width: 100%;
+  width: 100%;
+}
+.hehe{
+  margin-bottom: 4rem;
+  overflow-y: scroll;
 }
 .card-header {
   display: flex;
@@ -121,6 +107,10 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+.img-post{
+  display: flex;
+  gap: 5px;
 }
 .dropdown{
   padding-top: 3px;
@@ -298,13 +288,6 @@ body {
     display: none;
   }
 }
-.modal-footer{
-  height: 34.5rem;
-}
-.hehe{
-  height: 26.5rem;
-  overflow-y: scroll;
-}
 .cmt-section {
   display: flex;
   gap: 10px;
@@ -326,32 +309,34 @@ body {
   padding: 10px 15px;
   background-color: var(--content-cmt);
   border-radius: 20px;
-  max-width: 90%;
+  max-width: 87%;
   word-wrap: break-word;
 }
 .content div:nth-child(2){
   color: var(--sub-font-color);
 }
 
-.modal-cmt {
+.user-comment {
+  position: fixed;
+  bottom: 0;
   background-color: var(--background-color);
   border-top: 1px solid var(--button-color);
   display: flex;
   gap: 10px;
   padding: 10px;
 }
-.modal-cmt img {
+.user-comment img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
-.modal-cmt form{
+.user-comment form{
   display: flex;
   gap: 0.5rem;
 }
 .comment-input {
   border-radius: 15px;
-  width: 22rem;
+  width: 72rem;
   max-width: 90%;
   height: 40px;
   padding: 5px;
@@ -359,6 +344,16 @@ body {
 
 input::placeholder {
   color: #3a3a3a;
+}
+
+#comment-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 10px;
 }
 
 .navbar {
@@ -509,7 +504,7 @@ body.modal-open {
     padding-left: 0;
   }
   .navbar {
-    width: 4rem;
+    width: 3.7rem;
   }
 
   .nav-link p {
@@ -517,23 +512,33 @@ body.modal-open {
   }
 }
 
-
 @media only screen and (max-width: 1000px) {
-  body{
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
   .wrapper {
+    margin-bottom: 4rem;
     flex-direction: column;
     padding-left: 0;
   }
   .image{
+    top: auto;
     height: 100%;
+    width: 100%;
   }
   .image img{
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
+  }
+  .hehe{
+    margin-bottom: 0;
+  }
+  .comment-section {
+    width: 100%;
+  }
+  .user-comment{
+    position: static;
+  }
+  .comment-input {
+    width: 13rem;
   }
 
   .navbar {

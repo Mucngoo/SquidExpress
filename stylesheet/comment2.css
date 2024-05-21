@@ -104,7 +104,6 @@ body {
   flex-direction: column;
   background-color: var(--background-color);
   width: 31.3rem;
-  max-width: 100%;
 }
 .hehe{
   margin-bottom: 4rem;

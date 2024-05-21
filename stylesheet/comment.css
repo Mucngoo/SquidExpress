@@ -309,7 +309,7 @@ body {
   padding: 10px 15px;
   background-color: var(--content-cmt);
   border-radius: 20px;
-  max-width: 87%;
+  max-width: 100%;
   word-wrap: break-word;
 }
 .content div:nth-child(2){

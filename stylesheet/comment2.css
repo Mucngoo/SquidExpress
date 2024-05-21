@@ -364,6 +364,16 @@ input::placeholder {
   color: #3a3a3a;
 }
 
+#comment-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 10px;
+}
+
 .navbar {
   width: 12rem;
   height: 100vh;

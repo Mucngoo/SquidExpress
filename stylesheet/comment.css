@@ -359,7 +359,7 @@ body {
 .comment-input {
   border-radius: 15px;
   width: 70rem;
-  max-width: 90%;
+  max-width: 80%;
   height: 40px;
   padding: 5px;
 }

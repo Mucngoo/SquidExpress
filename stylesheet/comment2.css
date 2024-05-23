@@ -81,6 +81,28 @@ body {
   width: 100%;
   padding-left: 12rem;
 }
+.escape{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+.escape a{
+  border: 1px solid var(--button-color);
+  color: var(--font-color);
+  border-radius: 5px;
+  padding: 7px 7px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.escape a:hover{
+  background-color: var(--button-color);
+  color: var(--background-color);
+}
 
 .image{
   position: sticky;

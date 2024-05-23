@@ -350,7 +350,7 @@ body {
 .comment-input2 {
   border-radius: 15px;
   width: 20rem;
-  max-width: 80%;
+  max-width: 62%;
   height: 40px;
   padding: 5px;
 }
@@ -615,7 +615,7 @@ body.modal-open {
   .user-comment2{
     display: flex;
   }
-  .comment-input {
+  .comment-input2 {
     width: 13rem;
   }
 

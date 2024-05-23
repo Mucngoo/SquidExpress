@@ -272,7 +272,7 @@ body {
 }
 
 .heart-container .svg-outline,
-        .heart-container .svg-filled {
+.heart-container .svg-filled {
   fill: var(--heart-color);
   position: absolute;
 }
@@ -596,6 +596,7 @@ body.modal-open {
   }
   .image{
     top: auto;
+    height: 70vh;
     width: 100%;
   }
   .image img{

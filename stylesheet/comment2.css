@@ -334,7 +334,7 @@ body {
 
 .user-comment{
   position: fixed;
-  width: 40%;
+  width: 100%;
   bottom: 0;
   background-color: var(--background-color);
   border-top: 1px solid var(--button-color);
@@ -585,6 +585,9 @@ body.modal-open {
     display: flex;
     gap: 10px;
     padding: 10px;
+  }
+  .comment-input {
+    width: 13rem;
   }
 
   .navbar {

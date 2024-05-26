@@ -516,10 +516,18 @@ body.modal-open {
   pointer-events: all;
 }
 
+@media only screen and (max-width: 1400px) {
+  .comment-input {
+    width: 70rem;
+  }
+}
 
 @media only screen and (max-width: 1300px) {
   .wrapper {
     padding-left: 3.7rem;
+  }
+  .comment-input {
+    width: 60rem;
   }
   .navbar {
     width: 3.7rem;
